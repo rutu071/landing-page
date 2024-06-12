@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PicturePlus</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script type="text/javascript">
+        
+        function validateEmail() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+    
+
+            const nameRegex = /^[A-Za-z]+$/;
+            if (!nameRegex.test(name)) {
+                alert('name should only contain alphabets.');
+                return false;
+            }
+            // Regular expression for email validation
+            const emailRegex = /^[\w.-]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+            alert("message sent successfully...");
+            return true;
+            
+        }
+        </script>
+    <style>
+        .hero {
+            background-image: url('bgimage.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .overlay {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 50px;
+        }
+        .portfolio img {
+            width: 100%;
+            height: auto;
+        }
+        .contact-form {
+            margin-top: 30px;
+        }
+        .hero .overlay input{
+            width: 100%;
+            font-size: 18px;
+            padding: 12px 24px;
+            border-radius: 20px;
+             border: none;
+             background: #eee;
+        }
+        @media screen and (max-width:920px){
+        header{
+            width: 80%;
+
+        }
+            
+        }
+        .hero .overlay .material-symbols-outlined{
+            position: absolute;
+            right: 25px;
+            bottom: 10px;
+            color: #777;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <h1>PicturePlus</Picture></h1>
+            <nav>
+                <a href="#about" class="text-white mx-2">About</a>
+                <a href="#portfolio" class="text-white mx-2">Portfolio</a>
+                <a href="#services" class="text-white mx-2">Services</a>
+                <a href="#testimonials" class="text-white mx-2">Testimonials</a>
+                <a href="#contact" class="text-white mx-2">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay">
+             
+            <h1>Capturing Moments That Last a Lifetime</h1>
+            <p>Professional photography services for all occasions</p>
+            <a href="#portfolio" class="btn btn-primary">View Portfolio</a> <br><br>
+            <div class="col-md-6 offset-md-3">
+                <input type="text" id="search" class="form-control" placeholder="Search Images">
+                <span class="material-symbols-outlined">search</span>
+                
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container py-5">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="your-photo.jpg" alt="Photographer" class="img-fluid rounded-circle">
+            </div>
+            <div class="col-md-8">
+                <h2>About Me</h2>
+                <p>Hi, I'm [Rutuja Jadhav], a passionate photographer with over [3] years of experience. I specialize in capturing the beauty of life through my lens, creating timeless memories for my clients. Whether it's a wedding, portrait session, or commercial shoot, I strive to deliver exceptional results that exceed expectations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="container py-5">
+        <h2 class="text-center mb-4">Portfolio</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="sunflower.jpg" alt="Portfolio Image" class="img-fluid portfolio"><br><br>
+                <span class="material-symbols-outlined">favorite</span>
+                <span class="material-symbols-outlined">add_box</span>
+            </div>
+            <div class="col-md-4">
+                <img src="sea.jpg" alt="Portfolio Image" class="img-fluid portfolio"><br><br>
+                <span class="material-symbols-outlined">favorite</span>
+                <span class="material-symbols-outlined">add_box</span>
+            </div>
+            <div class="col-md-4">
+                <img src="aesthetic.jpg" alt="Portfolio Image" class="img-fluid portfolio"><br><br>
+                <span class="material-symbols-outlined">favorite</span>
+                <span class="material-symbols-outlined">add_box</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Wedding Photography</h3>
+                    <p>Capturing the most beautiful moments of your special day with elegance and style.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Portrait Sessions</h3>
+                    <p>Personalized portrait sessions that highlight your unique personality and charm.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Commercial Shoots</h3>
+                    <p>Professional photography services for businesses, including product and lifestyle shoots.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container py-5">
+        <h2 class="text-center mb-4">Testimonials</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <blockquote class="blockquote">
+                    <p class="mb-0">"Amazing photographer! The photos turned out beautiful and captured our special moments perfectly."</p>
+                    <footer class="blockquote-footer">Client Name</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-4">
+                <blockquote class="blockquote">
+                    <p class="mb-0">"Professional and talented. Highly recommend for any photography needs."</p>
+                    <footer class="blockquote-footer">Client Name</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-4">
+                <blockquote class="blockquote">
+                    <p class="mb-0">"Fantastic experience! The photos are stunning and exceeded our expectations."</p>
+                    <footer class="blockquote-footer">Client Name</footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Me</h2>
+            <form class="contact-form"onsubmit="return validateEmail()">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Your Phone Number">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Rutuja Jadhav. All rights reserved.</p>
+            <div>
+                <a href="#" class="text-white mx-2">Facebook</a>
+                <a href="#" class="text-white mx-2">Instagram</a>
+                <a href="#" class="text-white mx-2">Twitter</a>
+            </div>
+        </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
